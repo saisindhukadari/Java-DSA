@@ -1,0 +1,17 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int first = -1;
+        int last = -1;
+        int i = 0;
+        while (i < nums.length) {
+            if (nums[i] == target) {
+                if (first == -1) {
+                    first = i;
+                }
+                last = i;
+            }
+            i++;
+        }
+        return new int[]{first, last};
+    }
+}
