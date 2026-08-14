@@ -1,0 +1,14 @@
+class Solution {
+    public int countPairs(int[] deliciousness) {
+        HashMap<Integer, Integer> map=new HashMap<>();
+        long count=0;
+        for(int num:deliciousness){
+            for(int power=1;power<=(1<<21);power<<=1){
+                int need=power-num;
+                count+=map.getOrDefault(need,0);
+            }
+            map.put(num,map.getOrDefault(num,0)+1);
+        }
+        return (int)(count%1000000007);
+    }
+}
