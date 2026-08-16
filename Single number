@@ -22,7 +22,6 @@ class Main {
         }
     }
 }
-
 //Using Hash Table
 class Solution{
     public int singleNumber(int[] nums){
